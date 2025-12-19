@@ -49,9 +49,8 @@
             align-items: center;
             text-align: center;
             padding: 0 2rem;
-            /* IMAGE MATCHING YOUR PREVIEW: Honeycombs with dripping honey */
             background-image: 
-                linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), 
                 url("https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&q=80&w=1920");
             background-size: cover;
             background-position: center;
@@ -71,7 +70,6 @@
             color: #fdfdfd; 
             margin: 0 auto; 
             text-shadow: 1px 2px 5px rgba(0,0,0,0.6);
-            font-weight: 400;
         }
 
         /* ---------- SECTIONS ---------- */
@@ -81,7 +79,26 @@
         section p { max-width: 850px; margin: 0 auto 2rem; font-size: 1.15rem; color: #444; }
 
         .about { background-color: #fffaf2; }
-        .why-natural { background-color: #ffffff; }
+        
+        /* ---------- FIND US & BUTTON ---------- */
+        .find-us { background-color: #fcf4e8; border-top: 1px solid #f6d365; }
+        .contact-email { font-weight: 700; color: #5d3600; font-size: 1.3rem; display: block; margin-top: 1rem; transition: 0.3s; }
+        .contact-email:hover { color: #b45309; }
+        
+        .map-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background-color: #5d3600;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .map-button:hover { background-color: #f6d365; color: #5d3600; transform: scale(1.05); }
 
         /* ---------- PRODUCTS ---------- */
         .product-grid {
@@ -103,17 +120,14 @@
         .product-card img { width: 100%; height: 320px; object-fit: cover; }
         .product-info { padding: 2rem; }
         .product-card h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #5d3600; margin-bottom: 1rem; }
-        .product-card p { font-size: 1rem; margin: 0 0 1.5rem 0; line-height: 1.6; color: #666; }
         .price { font-weight: 700; font-size: 1.4rem; color: #5d3600; display: block; border-top: 1px solid #eee; padding-top: 1rem; }
 
         /* ---------- FOOTER ---------- */
         footer { background-color: #2e1a00; color: #f6d365; text-align: center; padding: 4rem 2rem; }
-        footer p { font-size: 0.9rem; opacity: 0.8; letter-spacing: 1px; }
 
         @media (max-width: 768px) {
             .hero h2 { font-size: 2.8rem; }
             header { flex-direction: column; padding: 1.5rem; }
-            nav { margin-top: 1rem; }
         }
     </style>
 </head>
@@ -123,9 +137,8 @@
     <h1>Clyde & Conrad Honey Co.</h1>
     <nav>
         <a href="#about" class="nav-button">Our Story</a>
-        <a href="#why-natural" class="nav-button">The Benefits</a>
         <a href="#products" class="nav-button">Shop Honey</a>
-        <a href="#contact" class="nav-button">Contact</a>
+        <a href="#find-us" class="nav-button">Find Us</a>
     </nav>
 </header>
 
@@ -142,50 +155,52 @@
 <section class="about" id="about">
     <h2>Our Heritage & Craft</h2>
     <p>
-        Clyde & Conrad Honey Co. began as a passion project fueled by a deep respect for the remarkable honeybee. Nestled in the rolling green landscapes of North Oxfordshire, our hives sit amidst the ancient hedgerows and wildflower meadows of Adderbury. We don't just "keep" bees; we steward them, ensuring they have a diverse and healthy environment to thrive in year-round.
+        Clyde & Conrad Honey Co. began as a passion project fueled by a deep respect for the remarkable honeybee. Nestled in the rolling green landscapes of North Oxfordshire, our hives sit amidst the ancient hedgerows and wildflower meadows of Adderbury.
     </p>
     <p>
-        Unlike commercial honey producers, we embrace a "slow honey" movement. We follow the rhythm of the seasons, allowing our bees to forage naturally on the local nectar of hawthorn, chestnut, and summer wildflowers. This connection to the land results in a harvest that changes subtly in flavor and color with every passing year—a true vintage of the Adderbury countryside.
-    </p>
-</section>
-
-<section class="why-natural" id="why-natural">
-    <h2>The Power of Raw Honey</h2>
-    <p>
-        Most supermarket honey is ultra-filtered and pasteurized at high temperatures. This process kills the live enzymes, destroys the delicate aromatic compounds, and removes the beneficial local pollen that makes honey a true superfood.
-    </p>
-    <p>
-        At Clyde & Conrad, we believe that nature got the recipe right the first time. Our honey is <strong>raw</strong>—meaning it has never been heated above the natural temperature of the beehive. This preserves the incredible complexity of its flavor profile and keeps its health-boosting properties intact. 
+        Unlike commercial honey producers, we embrace a "slow honey" movement. We follow the rhythm of the seasons, allowing our bees to forage naturally on the local nectar of hawthorn, chestnut, and summer wildflowers. 
     </p>
 </section>
 
 <section class="products" id="products">
     <h2>From the Hive to Your Table</h2>
-    <p>Each batch of our honey is hand-jarred and labeled in small quantities to ensure the highest quality.</p>
-    
     <div class="product-grid">
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1555035386-35366c89122c?auto=format&fit=crop&q=80&w=800" alt="Crystalised Clover Honey Jar">
+            <img src="https://images.unsplash.com/photo-1555035386-35366c89122c?auto=format&fit=crop&q=80&w=800" alt="Crystalised Clover Honey">
             <div class="product-info">
                 <h3>Crystalised Clover Honey</h3>
-                <p>
-                    A beautiful, pale honey harvested during the peak of the spring bloom. This variety is known for its delicate, creamy texture and subtle hints of vanilla. Because it is raw, it develops a fine, spreadable crystal structure perfect for toast.
-                </p>
+                <p>A beautiful, pale honey known for its creamy texture and subtle hints of vanilla. Perfectly spreadable for morning porridge.</p>
                 <span class="price">£5.00 (Standard Jar)</span>
             </div>
         </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&q=80&w=800" alt="Soft Wildflower Honey Jar">
+            <img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&q=80&w=800" alt="Soft Wildflower Honey">
             <div class="product-info">
                 <h3>Soft Wildflower Honey</h3>
-                <p>
-                    A complex, multi-floral blend that captures the diversity of the summer landscape. With a rich amber hue and a bold, aromatic profile, this honey offers deep notes of bramble and woodland blossoms.
-                </p>
+                <p>A complex multi-floral blend with a rich amber hue and bold aromatic profile. Captures the diversity of the summer landscape.</p>
                 <span class="price">£10.00 (Larger Jar)</span>
             </div>
         </div>
     </div>
+</section>
+
+<section class="find-us" id="find-us">
+    <h2>Where to Find Us</h2>
+    <p>
+        Our honey is as local as it gets. You can visit us and pick up a jar of our latest harvest directly from the farm:
+    </p>
+    <p>
+        <strong>Perry Tree Farm</strong><br>
+        Adderbury, Oxfordshire
+    </p>
+    
+    <a href="https://www.google.com/maps/search/Perry+Tree+Farm+Adderbury" target="_blank" class="map-button">Get Directions on Google Maps</a>
+
+    <p style="margin-top: 3rem;">
+        For orders, wholesale inquiries, or just to say hello, feel free to reach out via email:
+    </p>
+    <a href="mailto:unwaterprooftebags@gmail.com" class="contact-email">unwaterprooftebags@gmail.com</a>
 </section>
 
 <footer id="contact">
