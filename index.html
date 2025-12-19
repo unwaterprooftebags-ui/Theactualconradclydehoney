@@ -38,32 +38,51 @@
         }
         nav a.nav-button:hover { background-color: #6b3e00; color: #fff; transform: translateY(-2px); }
 
-        /* ---------- HERO ---------- */
+        /* ---------- HERO SECTION ---------- */
         .hero {
-            min-height: 75vh;
+            min-height: 80vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 0 2rem;
-            background-image:
-                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-                url("https://images.unsplash.com/photo-1587049352847-9c6b2b3b0c99?auto=format&fit=crop&w=1920&q=80");
+            /* Using the dripping honey/honeycomb background image */
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url("https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&q=80&w=1920");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
-        .hero h2 { font-size: 3.5rem; color: #fff; margin-bottom: 1rem; text-shadow: 2px 2px 6px rgba(0,0,0,0.7); }
-        .hero p { font-size: 1.5rem; color: #fff; max-width: 800px; margin: 0 auto; text-shadow: 2px 2px 6px rgba(0,0,0,0.7); }
+        .hero h2 { 
+            font-size: 3.5rem; 
+            color: #fff; 
+            margin-bottom: 1rem; 
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.8); /* Enhanced shadow for readability */
+        }
+        .hero p { 
+            font-size: 1.5rem; 
+            color: #fff; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8); 
+        }
 
         /* ---------- SECTIONS ---------- */
         section { padding: 5rem 2rem; text-align: center; }
         section h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 1.5rem; color: #6b3e00; }
-        section p { max-width: 750px; margin: 0 auto 1.5rem; font-size: 1.1rem; color: #555; }
+        section p { max-width: 750px; margin: 0 auto 1.5rem; font-size: 1.1rem; color: #555; line-height: 1.6; }
 
         .about { background-color: #fff2e0; }
         .about img,
-        .why-natural img { margin-top: 2rem; max-width: 80%; height: 400px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .why-natural img { 
+            margin-top: 2rem; 
+            max-width: 100%; 
+            height: 400px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+        }
 
         /* ---------- PRODUCTS ---------- */
         .product-grid {
@@ -84,7 +103,6 @@
         .product-card img { width: 100%; height: 250px; object-fit: cover; }
         .product-info { padding: 1.5rem; }
         .product-card h3 { font-family: 'Playfair Display', serif; color: #6b3e00; margin-bottom: 0.5rem; }
-        .product-info p { margin-bottom: 1rem; }
         .price { font-weight: bold; font-size: 1.3rem; color: #6b3e00; }
 
         /* ---------- FOOTER ---------- */
@@ -95,7 +113,6 @@
             header { flex-direction: column; gap: 1rem; }
         }
     </style>
-
 </head>
 <body>
 
@@ -126,29 +143,16 @@
         healthy bees and respect for the land. Our hives are located in the countryside
         surrounding Adderbury, where bees forage freely among wildflowers, clover, and native plants.
     </p>
-    <p>
-        We practice small-scale, organic beekeeping without chemicals, pesticides, or artificial feeding.
-        Our honey is harvested in limited batches, taking only what the bees can naturally spare.
-    </p>
-    <p>
-        Each jar is bottled fresh and left unfiltered and unheated to preserve its natural flavour,
-        aroma, and texture — honey exactly as the bees created it.
-    </p>
-    <img src="https://images.unsplash.com/photo-1484661733453-051029819907?auto=format&fit=crop&w=1200&q=80" alt="Golden organic honey dripping from honeycomb">
+    <img src="https://images.unsplash.com/photo-1464861072634-190137f8b05b?auto=format&fit=crop&w=1200" alt="Beekeeper checking hives">
 </section>
 
 <section class="why-natural" id="why-natural">
     <h2>Why Natural</h2>
     <p>
-        We believe all-natural honey offers the best flavour and the purest goodness.
         Free from preservatives, additives, or unnecessary processing, it retains all its
-        natural enzymes, aromas, and nutrients.
+        natural enzymes, aromas, and nutrients. Straight from the hive to your table.
     </p>
-    <p>
-        Our honey is raw and unprocessed — straight from the hive to your table, rich in
-        flavor and wholesome goodness.
-    </p>
-    <img src="https://images.unsplash.com/photo-1600124187768-8d7b72f6c4b5?auto=format&fit=crop&w=1200&q=80" alt="Beehives in a field">
+    <img src="https://images.unsplash.com/photo-1508500383182-6c1803b3919a?auto=format&fit=crop&w=1200" alt="Close up of a bee on a honeycomb">
 </section>
 
 <section class="products" id="products">
@@ -156,28 +160,19 @@
     <div class="product-grid">
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1569183207365-90a2e0262954?auto=format&fit=crop&w=800&q=80" alt="Crystalised Clover Honey">
+            <img src="https://images.unsplash.com/photo-1585435421671-0c16764628ce?auto=format&fit=crop&w=800" alt="Crystalised Clover Honey">
             <div class="product-info">
                 <h3>Crystalised Clover Honey</h3>
-                <p>
-                    Our Crystalised Clover Honey is smooth, golden, and naturally sweet.
-                    Harvested from local clover fields, it has a delicate floral aroma and
-                    velvety texture that makes it perfect for toast, tea, or baking.
-                </p>
+                <p>Smooth, golden, and naturally sweet. Perfect for toast or tea.</p>
                 <span class="price">£5.00 (Standard Jar)</span>
             </div>
         </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&w=800&q=80" alt="Soft Wildflower Honey">
+            <img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=800" alt="Soft Wildflower Honey">
             <div class="product-info">
                 <h3>Soft Wildflower Honey</h3>
-                <p>
-                    Our Soft Wildflower Honey comes in a larger jar for generous use.
-                    Rich and aromatic, it combines the nectar of multiple local blossoms,
-                    delivering complex flavors and a natural sweetness ideal for drizzling,
-                    cooking, or sharing with family.
-                </p>
+                <p>Rich and aromatic, delivering complex flavors from local blossoms.</p>
                 <span class="price">£10.00 (Larger Jar)</span>
             </div>
         </div>
