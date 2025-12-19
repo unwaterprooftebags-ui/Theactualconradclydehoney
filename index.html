@@ -3,177 +3,340 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clyde & Conrad Honey Co. | Pure Artisan Raw Honey from Adderbury</title>
-    <meta name="description" content="Small-batch, raw, and unfiltered honey from Adderbury. Experience the untainted sweetness of North Oxfordshire wildflowers.">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <title>Clyde & Conrad Honey Co. | Artisan Raw Honey Adderbury</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --honey-gold: #f6d365;
+            --deep-amber: #4b2c00;
+            --soft-cream: #fffdfa;
+            --text-main: #2d2d2d;
+            --glass: rgba(255, 255, 255, 0.85);
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; background-color: #fffdfa; color: #2d2d2d; line-height: 1.9; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: var(--soft-cream); 
+            color: var(--text-main); 
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
         html { scroll-behavior: smooth; }
         a { text-decoration: none; color: inherit; }
 
-        /* ---------- HEADER ---------- */
+        /* ---------- MODERN SCROLL-REVEAL ANIMATION ---------- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reveal { animation: fadeInUp 1s ease forwards; }
+
+        /* ---------- HEADER & NAVIGATION ---------- */
         header {
-            background-color: #f6d365;
-            padding: 1.2rem 2.5rem;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.9rem;
-            color: #4b2c00;
+        
+        header h1 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 1.6rem; 
+            color: var(--deep-amber); 
+            font-weight: 700;
             letter-spacing: -0.5px;
         }
 
         nav a.nav-button {
-            padding: 0.7rem 1.5rem;
-            margin-left: 1rem;
-            border: 2px solid #4b2c00;
-            border-radius: 4px;
+            padding: 0.7rem 1.4rem;
+            margin-left: 0.5rem;
             font-weight: 600;
-            font-size: 0.85rem;
-            color: #4b2c00;
-            transition: all 0.4s ease;
+            font-size: 0.8rem;
+            color: var(--deep-amber);
+            transition: 0.4s;
             text-transform: uppercase;
-            letter-spacing: 1.2px;
+            letter-spacing: 1.5px;
+            border-radius: 50px;
         }
-        nav a.nav-button:hover {
-            background-color: #4b2c00;
-            color: #fff;
+
+        nav a.nav-button:hover { 
+            background-color: var(--honey-gold); 
+            box-shadow: 0 4px 15px rgba(246, 211, 101, 0.4);
         }
 
         /* ---------- HERO SECTION ---------- */
         .hero {
-            min-height: 90vh;
+            height: 95vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 2rem;
-
-            /* FIXED BACKGROUND IMAGE */
-            background-image:
-                linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-                url("./images/honey-1958464_1280.jpg");
-
+            padding: 0 10%;
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                url("https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?auto=format&fit=crop&q=80&w=1920");
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
-        .hero-content { max-width: 950px; }
-
-        .hero h2 {
+        .hero h2 { 
             font-family: 'Playfair Display', serif;
-            font-size: 4.8rem;
-            font-style: italic;
-            color: #ffffff;
-            margin-bottom: 1.5rem;
-            text-shadow: 3px 6px 18px rgba(0,0,0,0.6);
+            font-size: clamp(2.5rem, 6vw, 5rem); 
+            color: #fff; 
+            margin-bottom: 1.5rem; 
+            text-shadow: 0 10px 30px rgba(0,0,0,0.3);
             line-height: 1.1;
         }
 
-        .hero p {
-            font-size: 1.6rem;
-            color: #fdfdfd;
-            max-width: 750px;
+        .hero p { 
+            font-size: 1.4rem; 
+            color: #fff; 
+            max-width: 800px;
             margin: 0 auto;
-            text-shadow: 1px 2px 10px rgba(0,0,0,0.45);
             font-weight: 300;
+            letter-spacing: 0.5px;
         }
 
-        /* ---------- SECTION BASICS ---------- */
-        section { padding: 8rem 2rem; text-align: center; }
-        section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            margin-bottom: 2.5rem;
-            color: #4b2c00;
+        /* ---------- CONTENT SECTIONS ---------- */
+        section { padding: 8rem 10%; text-align: center; }
+        
+        section h2 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 2.8rem; 
+            margin-bottom: 2rem; 
+            color: var(--deep-amber); 
         }
-        section p {
-            max-width: 900px;
-            margin: 0 auto 2.5rem;
-            font-size: 1.2rem;
-            color: #4a4a4a;
+
+        section p { 
+            max-width: 850px; 
+            margin: 0 auto 2rem; 
+            font-size: 1.15rem; 
+            color: #555;
+            font-weight: 400;
         }
 
         .about { background-color: #fffaf2; }
         .why-natural { background-color: #ffffff; }
 
-        /* ---------- PRODUCTS ---------- */
+        /* ---------- PRODUCT CARDS ---------- */
         .products { background-color: #fffaf2; }
+        
         .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 4rem;
-            max-width: 1250px;
-            margin: 4rem auto 0;
+            margin-top: 4rem;
         }
 
         .product-card {
             background: #fff;
-            border-radius: 12px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-align: left;
         }
 
-        .product-card img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
+        .product-card:hover { 
+            transform: translateY(-20px); 
+            box-shadow: 0 30px 60px rgba(75, 44, 0, 0.12); 
+        }
+
+        .product-card img { 
+            width: 100%; 
+            height: 400px; 
+            object-fit: cover; 
+            transition: 0.5s;
         }
 
         .product-info { padding: 2.5rem; }
-
-        .price {
-            font-weight: 700;
-            font-size: 1.6rem;
-            color: #4b2c00;
+        
+        .product-card h3 { 
+            font-family: 'Playfair Display', serif; 
+            font-size: 1.8rem; 
+            color: var(--deep-amber); 
+            margin-bottom: 1rem; 
         }
 
-        footer {
-            background-color: #2e1a00;
-            color: #f6d365;
-            text-align: center;
-            padding: 5rem 2rem;
+        .price { 
+            font-weight: 700; 
+            font-size: 1.6rem; 
+            color: var(--deep-amber); 
+            display: block; 
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #f5f5f5;
         }
+
+        /* ---------- FIND US SECTION ---------- */
+        .find-us { background-color: #fff; padding-bottom: 10rem; }
+        
+        .contact-email { 
+            font-weight: 600; 
+            color: var(--deep-amber); 
+            font-size: 1.4rem; 
+            display: inline-block;
+            padding-bottom: 5px;
+            border-bottom: 2px solid var(--honey-gold);
+            transition: 0.3s;
+        }
+
+        .contact-email:hover { border-bottom-color: var(--deep-amber); }
+        
+        .map-button {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 1.2rem 3rem;
+            background-color: var(--deep-amber);
+            color: #fff;
+            font-weight: 600;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.4s;
+        }
+
+        .map-button:hover { 
+            background-color: var(--honey-gold); 
+            color: var(--deep-amber);
+            transform: translateY(-5px);
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer { 
+            background-color: var(--deep-amber); 
+            color: var(--honey-gold); 
+            text-align: center; 
+            padding: 6rem 2rem; 
+        }
+
+        footer p { font-size: 0.9rem; opacity: 0.7; letter-spacing: 1px; }
 
         @media (max-width: 768px) {
-            .hero h2 { font-size: 3.2rem; }
+            header { flex-direction: column; padding: 1.5rem; }
+            nav { margin-top: 1rem; }
+            .hero h2 { font-size: 3rem; }
+            section { padding: 5rem 5%; }
         }
     </style>
 </head>
-
 <body>
 
 <header>
-    <h1>Clyde & Conrad Honey Co.</h1>
+    <h1>Clyde & Conrad</h1>
     <nav>
         <a href="#about" class="nav-button">Our Story</a>
-        <a href="#why-natural" class="nav-button">Why Raw?</a>
-        <a href="#products" class="nav-button">The Collection</a>
-        <a href="#find-us" class="nav-button">Buy Honey</a>
+        <a href="#why-natural" class="nav-button">The Philosophy</a>
+        <a href="#products" class="nav-button">Our Jars</a>
+        <a href="#find-us" class="nav-button">Where to Buy</a>
     </nav>
 </header>
 
 <section class="hero">
-    <div class="hero-content">
-        <h2>Clyde & Conrad Honey Co.</h2>
+    <div class="hero-content reveal">
+        <h2>Liquid Gold, Bottled in Adderbury</h2>
         <p>
-            Raw, small-batch honey harvested from the wild hedgerows and ancient meadows of North Oxfordshire — bottled by hand, exactly as nature intended.
+            Experience the untamed sweetness of the British countryside through our raw, unfiltered, and small-batch harvest.
         </p>
     </div>
 </section>
 
-<!-- ALL OTHER SECTIONS REMAIN UNCHANGED BELOW -->
+<section class="about" id="about">
+    <div class="reveal">
+        <h2>The Spirit of the Hive</h2>
+        <p>
+            At Clyde & Conrad Honey Co., we believe that truly exceptional honey is not just a food, but a reflection of the landscape. Our bees spend their days navigating the lush, ancient hedgerows and sun-drenched wildflower meadows of <strong>Adderbury</strong>, collecting nectar that carries the very essence of North Oxfordshire.
+        </p>
+        <p>
+            Our process is a slow, quiet art. We work in harmony with the seasons, interfering as little as possible to ensure that the delicate life of the hive is respected. Every jar we produce is a single-origin masterpiece, hand-poured and unique to the specific time and place of its harvest.
+        </p>
+    </div>
+</section>
+
+<section class="why-natural" id="why-natural">
+    <div class="reveal">
+        <h2>The Raw Difference</h2>
+        <p>
+            Most modern honey is over-processed—heated and pressurized until its soul is stripped away. At Clyde & Conrad, we choose a different path. Our honey remains <strong>Raw</strong>, meaning it is never heated above the natural temperature of the beehive.
+        </p>
+        <p>
+            This gentle approach preserves the living enzymes, the intricate aromatic compounds, and the precious local pollens that make raw honey a true gift for the body. When you taste our harvest, you aren't just tasting sugar; you are tasting the minerals, the flora, and the vibrant health of the natural world.
+        </p>
+    </div>
+</section>
+
+<section class="products" id="products">
+    <div class="reveal">
+        <h2>The Collection</h2>
+        <p>Our seasonal harvests are a sensory tour of the Adderbury countryside. From pale, silken creams to deep, resinous ambers.</p>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1555035386-35366c89122c?auto=format&fit=crop&q=80&w=800" alt="Crystalised Clover Honey">
+                <div class="product-info">
+                    <h3>Crystalised Clover Honey</h3>
+                    <p>
+                        A luminous, pale honey gathered during the height of the spring bloom. It features a velvety, spreadable texture with soft, nostalgic notes of vanilla and warm clover.
+                    </p>
+                    <span class="price">£5.00</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&q=80&w=800" alt="Soft Wildflower Honey">
+                <div class="product-info">
+                    <h3>Soft Wildflower Honey</h3>
+                    <p>
+                        A bold, multi-floral celebration of the high summer. This rich, amber harvest is brimming with the deep aromas of bramble and wild Oxfordshire blossoms.
+                    </p>
+                    <span class="price">£10.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="find-us" id="find-us">
+    <div class="reveal">
+        <h2>Where can you buy our honey?</h2>
+        <p>
+            Our hives thrive just a few hundred meters from our collection point. We invite you to experience the freshness of a local harvest by visiting us directly:
+        </p>
+        <p>
+            <strong style="font-size: 1.6rem; color: var(--deep-amber); font-family: 'Playfair Display', serif;">Perry Tree Farm</strong><br>
+            Adderbury, Oxfordshire
+        </p>
+        
+        <a href="https://www.google.com/maps/search/Perry+Tree+Farm+Adderbury" target="_blank" class="map-button">Get Directions</a>
+
+        <p style="margin-top: 5rem; font-size: 1rem; color: #777;">
+            For wholesale enquiries or to check current harvest availability:
+        </p>
+        <a href="mailto:unwaterprooftebags@gmail.com" class="contact-email">unwaterprooftebags@gmail.com</a>
+    </div>
+</section>
+
+<footer>
+    <p>Grown with respect. Harvested with care. Bottled by hand.</p>
+    <p style="margin-top: 20px; font-weight: 600; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px;">
+        Adderbury, Oxfordshire • © 2025 Clyde & Conrad Honey Co.
+    </p>
+</footer>
 
 </body>
 </html>
